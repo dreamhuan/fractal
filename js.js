@@ -21,7 +21,7 @@ function iteration(z, c) { //迭代30次,返回arr[],arr[0]记录迭代次数
     arr[0] = i;
     return arr;
 }
-var color = [0,
+var color = [123,
     '#2A42FF', '#74A4FF', '#B5D0FF', '#A2FFC3', '#89FFC1',
     '#6DFF66', '#41FF6A', '#94FF4E', '#B5FF6B', '#ECFFA5',
     '#FFF987', '#EEFF64', '#F2FF54', '#FFE73C', '#FFCB3E',
