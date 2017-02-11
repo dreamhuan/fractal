@@ -1,4 +1,4 @@
-# Fractal
+# fractal
 github-page:https://dreamhuan.github.io/fractal/<br/>
 复变函数f(z)=z^2+c的分形图像产生的Julia集和Mandelbrot集<br/>
 Julia:https://zh.wikipedia.org/wiki/%E6%9B%BC%E5%BE%B7%E5%8D%9A%E9%9B%86%E5%90%88  
