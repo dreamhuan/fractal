@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fractal</title>
+    <link href="css.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<h1>fractal</h1>
+<div id="Center">
+    <div id="Julia">
+        对于复数z0=x+iy，取不同的x值和y值，函数迭代的结果不一样：对于有些z0，函数值约束在某一范围内；
+        而对于另一些z0，函数值则发散到无穷。由于复数对应平面上的点，因此我们可以用一个平面图形来表示，
+        对于哪些z0函数值最终趋于无穷，对于哪些z0函数值最终不会趋于无穷。我们用深灰色表示不会使函数值趋于无穷的z0；
+        对于其它的z0，我们用不同的颜色来区别不同的发散速度。由于当某个时候|z|>2时，函数值一定发散，
+        因此这里定义发散速度为：使|z|大于2的迭代次数越少，则发散速度越快。可以得到Julia集分形图形。
+    </div>
+    <div id="c">
+        a:
+        <output id='scaleOutputA'>0.000</output>
+        <input id='scaleSliderA' type='range' min='-2.000' max='2.000' step='0.001' value="0.000"/>
+        <br/>
+        b:
+        <output id='scaleOutputB'>0.000</output>
+        <input id='scaleSliderB' type='range' min='-2.000' max='2.000' step='0.001' value="0.000"/>
+        <br/>
+        c:a+bi=<output id='showC'>0.000+0.000i</output>
+    </div>
+    <canvas id="DrawJulia"></canvas>
+    <div id="Mandelbrot">
+        类似地，我们固定z0=0，那么对于不同的复数c，函数的迭代结果也不同。
+        由于复数c对应平面上的点，因此我们可以用一个平面图形来表示，
+        对于某个复数c，函数f(z)=z^2+c从z0=0开始迭代是否会发散到无穷。
+        我们同样用不同颜色来表示不同的发散速度，最后得出的就是Mandelbrot集分形图形。
+    </div>
+    <canvas id="DrawMandelbrot"></canvas>
+</div>
+<script src="js.js"></script>
+</body>
+</html>
