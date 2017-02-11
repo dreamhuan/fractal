@@ -7,21 +7,21 @@ function iteration(z, c) { //迭代30次,返回arr[],arr[0]记录迭代次数
         return res;
     }
 
-    var res = f(z, c);
+    var res = f(z, c); //第一次计算
     var arr = [1, res];
     if (res.r > 2)
         return arr;
-    for (var i = 2; i <= 30; i++) {
+    for (var i = 2; i <= 30; i++) { //迭代
         arr[i] = f(arr[i - 1], c);
         if (arr[i].r > 2)
             break;
     }
-    if (i == 31)
+    if (i == 31) //迭代完30次后会i++所以减回来
         i--;
     arr[0] = i;
     return arr;
 }
-var color = [123,
+var color = [0, //下标1到30，0随便填个数
     '#2A42FF', '#74A4FF', '#B5D0FF', '#A2FFC3', '#89FFC1',
     '#6DFF66', '#41FF6A', '#94FF4E', '#B5FF6B', '#ECFFA5',
     '#FFF987', '#EEFF64', '#F2FF54', '#FFE73C', '#FFCB3E',
